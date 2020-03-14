@@ -17,7 +17,7 @@ class Stats(commands.Cog):
         }
 
     @commands.command()
-    async def stats(self, ctx, country):
+    async def stats(self, ctx, *, country):
         "See COVID-19 Stats about a country."
         querystring = {"country": country}
         async with aiohttp.ClientSession() as cs:
