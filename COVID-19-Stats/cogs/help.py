@@ -48,7 +48,7 @@ class HelpCommand(commands.HelpCommand):
         bot = self.context.bot
         prefix = self.clean_prefix
         embed = discord.Embed(
-            title="**Infos about {command.name}**",
+            title=f"**Infos about {command.name}**",
             color=bot.EMBED_COLOR,
             timestamp=datetime.utcnow())
         content = f"{prefix}{command}" if command.signature is "" else f"{prefix}{command} {command.signature}"
